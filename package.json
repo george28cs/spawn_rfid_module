@@ -1,6 +1,6 @@
 {
   "name": "spawn_rfid_module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "spawn keyboard events reader",
   "main": "index.js",
   "scripts": {
