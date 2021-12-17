@@ -6,7 +6,7 @@ see also: https://www.kernel.org/doc/Documentation/input
 
 ### Installation
 ````
-$ npm install input-event --save
+$ npm install spawn_rfid_module --save
 ````
 
 ### Example
