@@ -1,50 +1,71 @@
-## input-event
+## spawn_rfid_module
 
-read and parse input device(like mouse, keyboard and IR-Remote)'s event data
+Read and parse input device(like mouse, keyboard and IR-Remote)'s event data.  
+Forked from  [input-event](https://www.npmjs.com/package/input-event).
+
+This module uses the child_process.spawn() method instead of openSync.
 
 see also: https://www.kernel.org/doc/Documentation/input
 
 ### Installation
-````
+
+```
 $ npm install spawn_rfid_module --save
-````
+```
 
 ### Example
-````javascript
+
+```javascript
 const InputEvent = require('spawn-input-event');
 
 const input = new InputEvent('/dev/input/event0');
 
 const keyboard = new InputEvent.Keyboard(input);
 
-keyboard.on('keyup'   , console.log);
-keyboard.on('keydown' , console.log);
+keyboard.on('keyup', console.log);
+keyboard.on('keydown', console.log);
 keyboard.on('keypress', console.log);
+```
 
-````
+### Utils
+
+Kill the current instance
+
+```javascript
+input.destroy();
+keyboard.destroy();
+```
+
+Get the process PID 
+
+```javascript
+input.getPid()
+```
 
 ### TODO
 
-+ [x] Keyboard
-+ [x] Mouse
-+ [x] IR-Remote
-+ [X] JoyStick
-+ [X] Rotary (eg. KY040)
+- [x] Keyboard
+- [x] Mouse
+- [x] IR-Remote
+- [x] JoyStick
+- [x] Rotary (eg. KY040)
 
 ### API
+
 check this file: `index.js`
 
-
 ### Contributing
+
 - Fork this repo
 - Clone your repo
 - Install dependencies
 - Checkout a feature branch
 - Feel free to add your features
 - Make sure your features are fully tested
-- Open a pull request, and enjoy <3
+- Open a pull request, and enjoy.
 
 ### MIT license
+
 Copyright (c) 2016 lsong
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
