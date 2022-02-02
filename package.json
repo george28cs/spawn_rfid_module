@@ -1,11 +1,15 @@
 {
   "name": "spawn_rfid_module",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "spawn keyboard events reader",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jorge Carrión",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/george28cs/spawn_rfid_module"
+  }
 }

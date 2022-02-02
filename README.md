@@ -1,7 +1,9 @@
 ## spawn_rfid_module
 
-Read and parse input device(like mouse, keyboard and IR-Remote)'s event data.  
+Read and parse input device(like mouse, keyboard, RFID scanner and IR-Remote)'s event data.  
 Forked from  [input-event](https://www.npmjs.com/package/input-event).
+
+**NOTE: This module only runs on Linux based systems**
 
 This module uses the child_process.spawn() method instead of openSync.
 
@@ -26,6 +28,8 @@ keyboard.on('keyup', console.log);
 keyboard.on('keydown', console.log);
 keyboard.on('keypress', console.log);
 ```
+
+**See the [example.js](example.js) file for use with an rfid reader**
 
 ### Utils
 
